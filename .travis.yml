@@ -1,3 +1,10 @@
 language: ruby
 rvm:
-  - 2.0.0
+- 2.0.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: LtNn8pXp4dWTHAF95Dhfqsq1/IeqQaoHu50B8lHgoNXZvgtkBNY5IrbSpSMw2vAPDYrpITZ3Fk6jO2p8f3ssquXl9Tq1VMQtfJwbUQwjqfjtrXtF8FxBxz1VeMPELwwfKWPxe9JSaMNhCLYn5rrCZl4Y/GC0UbfPXimEG35RI2+15mZFj4XHs3m6FMHCwffwdzDmVLTbBT+d/sWRD1k7MDHTOrola66DTfKWzE6VPd3FO6PucY91CMzZMDZrkteSe715HMEkXdKp62Pz9IM+6TC7I8vCvifHSxT5pkdQj2bs0YAb9RXDqbW8T3YR8Hky4VH0+XDMy2lVNVNaEgU5/okjJVRhnQeKLJWCcVZX+L9EzwXqcRT1U+MxbNBvfY8yhpDWuj59RnB5hV31RERZIbP78DijKF0Pcdkney8sDSflYC7ojo58WK8fubHedk7YLTu2+vKSn7wrxgKyul9NULc02OiAB+ISb173Z1ohg6P0weNMvyVnqDfRm6K8WBkdNEEnuCgP2EpOZ9rJVHipoqIQm3FuVDXWg5Nr92mIZdU1/1a54/WzddWBSKdK+Sf8dWMuIAjSMXSZcD8R0bIvbqQZxSnY8at4sbrUE5LIb7MwuhRtY64XUuVt2LWlvhZ9Hgdf+ozt6R3UYD6C7c3gq0nMD/T947wgxD5EOALqF2k=
+  app: secret-sierra-80991
+  on:
+    repo: med-amiine/projet

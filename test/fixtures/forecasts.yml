@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  attitude: 1.5
+  logtitude: 1.5
+  temperature: 1.5
+  summary: MyString
+
+two:
+  attitude: 1.5
+  logtitude: 1.5
+  temperature: 1.5
+  summary: MyString

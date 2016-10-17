@@ -1,5 +1,15 @@
 class City < ActiveRecord::Base
  before_validation :geocode
+  
+   public
+
+   def forecast_io
+   forecast = ForecastIO.forecast(self.lat, self.lon, params: { units: 'si' })
+   results = {}
+   results[:temperature]  = forecast.currently.temperature
+   results[:summary] = forecast.currently.summary
+   results
+end
 
  private
 

@@ -6,14 +6,14 @@ class CitiesController < ApplicationController
   def index
     @cities = City.all
     @cities.each do | city |
-		city.forecast_io
-  	end
+      city.forecast_io
+    end
   end
 
   # GET /cities/1
   # GET /cities/1.json
   def show
-    @forecasts = @city.forecast_io
+    @forecast = @city.forecast_io
   end
 
   # GET /cities/new

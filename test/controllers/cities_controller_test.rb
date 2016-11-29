@@ -15,14 +15,14 @@ class CitiesControllerTest < ActionController::TestCase
     get :new
     assert_response :success
   end
-
+  
   test "should create city" do
-      VCR.use_cassette("nominatim") do
-    assert_difference('City.count') do
-      post :create, city: { lat: @city.lat, lon: @city.lon, name: @city.name }
+    VCR.use_cassette("nominatim") do
+      assert_difference('City.count') do
+        post :create, city: { lat: @city.lat, lon: @city.lon, name: @city.name }
+      end
+      assert_redirected_to city_path(assigns(:city))
     end
-  end
-    assert_redirected_to city_path(assigns(:city))
   end
 
   test "should show city" do
@@ -36,11 +36,12 @@ class CitiesControllerTest < ActionController::TestCase
   end
 
   test "should update city" do
-     VCR.use_cassette("nominatim") do
-    patch :update, id: @city, city: { lat: @city.lat, lon: @city.lon, name: @city.name }
-    assert_redirected_to city_path(assigns(:city))
+    VCR.use_cassette("nominatim") do
+      patch :update, id: @city, city: { lat: @city.lat, lon: @city.lon, name: @city.name }
+      assert_redirected_to city_path(assigns(:city))
+    end
   end
-  end
+
   test "should destroy city" do
     assert_difference('City.count', -1) do
       delete :destroy, id: @city

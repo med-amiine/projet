@@ -8,3 +8,12 @@ deploy:
   app: secret-sierra-80991
   on:
     repo: med-amiine/projet
+
+addons:
+  code_climate:
+    repo_token: 8292ba735c2bc430e049320a4db64313526bf4427621c70b4658ec10bab543cb
+# regular test configuration
+after_success:
+  - bundle exec codeclimate-test-reporter
+    
+    

@@ -55,3 +55,7 @@ gem 'forecast_io', '~> 2.0'
 gem 'sass-rails', '>= 3.2'
 
 gem 'bootstrap-sass', '~> 3.3.6'
+group :test do
+  gem "simplecov"
+  gem "codeclimate-test-reporter", "~> 1.0.0"
+end

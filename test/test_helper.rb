@@ -17,5 +17,6 @@ class ActiveSupport::TestCase
 end
 
 
-
+require "simplecov"
+SimpleCov.start
 

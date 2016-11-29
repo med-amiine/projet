@@ -1,3 +1,4 @@
+<!--
 <h1>Listing students</h1>
 
 <table>
@@ -27,3 +28,68 @@
 <br>
 
 <%= link_to 'New Student', new_student_path %>
+-->
+
+
+
+<div class="container">
+<div class="row">
+  <br>
+  <br>
+  
+</div>  
+
+<h1>Listing students</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Birthday</th>
+       <th>Show</th>
+       <th>Edit</th>
+       <th>Destroy</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.name %></td>
+        <td><%= student.surname %></td>
+        <td><%= student.birthday %></td>
+       
+        <td><button type="button" class="btn btn-primary">  &nbsp; &nbsp;<%= link_to 'Show', student %></button></td>
+        <td><button type="button" class="btn btn-warning"> &nbsp; &nbsp;<%= link_to 'Edit', edit_student_path(student) %></button></td>
+         <td><button type="button" class="btn btn-danger"> &nbsp; &nbsp;<%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<button type="button" class="btn btn-default"><%= link_to 'New Student', new_student_path %></button>
+</div>
+
+<style>
+a {
+    color: black;
+    font-family:candara;
+    text-decoration: none;
+    font-size:14px;
+}
+  a:hover {
+    color: black;
+    font-family:candara;
+    text-decoration: none;
+    font-size:14px;
+    font-style:italic;
+    font-weight: bold;
+}
+</style>
+

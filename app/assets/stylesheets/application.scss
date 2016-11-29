@@ -11,6 +11,32 @@
  * file per style scope.
  */
 
-@import "bootstrap-mincer";
+@import "bootstrap-sprockets";
 @import "bootstrap";
- 
+
+#main{
+  margin:25px;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+table, th, td{
+  border:10px solid hsla(0,0%,100%,2);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #C2E4EC;
+    color: white;
+}
